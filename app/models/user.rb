@@ -8,7 +8,7 @@
 #  encrypted_password     :string           default(""), not null
 #  likes_count            :integer          default(0)
 #  photos_count           :integer          default(0)
-#  private                :boolean
+#  private                :boolean          default(TRUE)
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string
@@ -54,4 +54,9 @@ class User < ApplicationRecord
 
   # has_many :outgoing_requests, class_name: "Follow_Request", foreign_key: "sender_id"
   # has_many :incoming_requests, class_name: "Follow_Request", foreign_key: "recipient_id"
+
+
+  ### validations
+
+  validates :username, presence: true, uniqueness: true
 end
