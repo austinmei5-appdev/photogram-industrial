@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   has_many :own_photos, class_name: "Photo", foreign_key: "owner_id"
   has_many :comments, foreign_key: "author_id"
-  has_many :outgoing_requests, class_name: "Follow Request" foreign_key: "sender_id"
-  has_many :incoming_requests, class_name: "Follow Request" foreign_key: "recipient_id"
+  has_many :outgoing_requests, class_name: "Follow_Request", foreign_key: "sender_id"
+  has_many :incoming_requests, class_name: "Follow_Request", foreign_key: "recipient_id"
 end
