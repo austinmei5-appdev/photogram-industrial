@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Author:</strong>
   <%= @comment.author_id %>
@@ -15,5 +13,5 @@
   <%= @comment.body %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to "Edit", edit_comment_path(@comment) %> |
+<%= link_to "Back", comments_path %>

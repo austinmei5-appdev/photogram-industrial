@@ -55,7 +55,6 @@ class User < ApplicationRecord
   # has_many :outgoing_requests, class_name: "Follow_Request", foreign_key: "sender_id"
   # has_many :incoming_requests, class_name: "Follow_Request", foreign_key: "recipient_id"
 
-
   ### validations
 
   validates :username, presence: true, uniqueness: true
