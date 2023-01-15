@@ -16,9 +16,9 @@
       <tr>
         <td><%= like.fan_id %></td>
         <td><%= like.photo_id %></td>
-        <td><%= link_to 'Show', like %></td>
-        <td><%= link_to 'Edit', edit_like_path(like) %></td>
-        <td><%= link_to 'Destroy', like, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "Show", like %></td>
+        <td><%= link_to "Edit", edit_like_path(like) %></td>
+        <td><%= link_to "Destroy", like, method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Like', new_like_path %>
+<%= link_to "New Like", new_like_path %>

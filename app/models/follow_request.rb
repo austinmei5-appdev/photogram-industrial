@@ -27,6 +27,4 @@ class FollowRequest < ApplicationRecord
 
   scope :accepted, -> { where(status: "accepted") }
   scope :not_accepted, -> { where.not(status: "accepted") }
-
-
 end
