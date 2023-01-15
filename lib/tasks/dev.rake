@@ -63,7 +63,7 @@ task sample_data: :environment do
 
       user.followers.each do |follower|
         if rand < 0.5
-          photos.fans << follower # pushing follower into the fans collection of the Photo
+          photo.fans << follower # pushing follower into the fans collection of the Photo
         end
 
         if rand < 0.25
@@ -77,6 +77,7 @@ task sample_data: :environment do
   end
 
   p "#{User.count} users created"
+  p "#{Photo.count} users created"
 
   p "#{FollowRequest.count} follow requests created"
   p "#{Comment.count} comments created"
