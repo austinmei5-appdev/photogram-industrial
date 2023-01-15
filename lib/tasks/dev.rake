@@ -79,5 +79,7 @@ task sample_data: :environment do
   p "#{User.count} users created"
 
   p "#{FollowRequest.count} follow requests created"
+  p "#{Comment.count} comments created"
+  p "#{Like.count} likes created"
 
 end
