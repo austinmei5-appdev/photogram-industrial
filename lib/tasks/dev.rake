@@ -28,6 +28,10 @@ task sample_data: :environment do
   usernames << "alice"
   usernames << "bob"
 
+  12.times do
+    usernames << Faker::Name.first_name
+  end
+
   usernames.each do |username|
     u = User.create(
       email: "#{username}@example.com",
@@ -35,8 +39,6 @@ task sample_data: :environment do
       password: "password",
       private: [true, false].sample
     )
-
-
     # p u.errors.full_messages
   end
   users = User.all
@@ -82,7 +84,7 @@ task sample_data: :environment do
   end
 
   p "#{User.count} users created"
-  p "#{Photo.count} users created"
+  p "#{Photo.count} photos created"
 
   p "#{FollowRequest.count} follow requests created"
   p "#{Comment.count} comments created"
