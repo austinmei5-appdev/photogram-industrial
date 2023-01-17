@@ -27,4 +27,8 @@ class FollowRequest < ApplicationRecord
 
   scope :accepted, -> { where(status: "accepted") }
   scope :not_accepted, -> { where.not(status: "accepted") }
+
+  validates :recipient_id, uniqueness: { scope: :sender_id, message: "Already following this user." }
+
+  # validates :recipient_id, uniqueness: { scope: :sender_id, message: "already followed" }
 end

@@ -1,0 +1,7 @@
+    <ul class="list-group">
+      <% people.each do |person| %>
+        <li class="list-group-item list-group-item-action">
+          <%= link_to "#{person.username}", user_path(person.username) %>
+        </li>
+      <% end %>
+    </ul>
